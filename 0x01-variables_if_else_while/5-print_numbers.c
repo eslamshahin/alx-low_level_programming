@@ -1,15 +1,20 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
+ * main - print single base 10 digit starting from 0
  *
- * Return: Always 0 (success)
+ * Description: using the main function
+ * this program prints "0123456789
+ * Return: 0
  */
 int main(void)
 {
-	int a;
-
-	for (a = 0; a <= 10; a++)
-		printf("%d", a);
-	putchar('\n');
+	int d;
+	
+	for (d = 0 ; d < 10 ; d++)
+	{
+		printf("%d", d);
+	}
+	printf("\n");
 	return (0);
 }
