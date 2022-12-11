@@ -1,27 +1,23 @@
 #include <stdio.h>
 /**
- * main - Entry - point
+ * main - print base 16 numbers
  *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char c;
 
-	int d;
+	int i;
+	char j;
 
-	c = 'a';
-	d = 0;
-	while
-		(d < 10) {
-			putchar(d + "0");
-			d++;
-		}
-	while
-		(c <= 'F') {
-			putchar(c);
-			c++;
-		}
-	putchar('\n');
+	
+	for (i = 0; i < 10; i++)
+		putchar((i % 10) + '0');
+
+	for (j = 'a'; j <= 'f'; j++)
+		putchar(j);
+	putchar(10);
+	
 	return (0);
 }
