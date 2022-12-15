@@ -9,7 +9,8 @@ int main(void)
 long int n = 612852475143, i = 2, k;
 while (n != 0)
 {
-if (n % i != 0) i += 1;
+if (n % i != 0)
+i += 1;
 else
 {
 k = n;
