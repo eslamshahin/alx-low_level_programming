@@ -1,25 +1,22 @@
-#include "main.h"
+#include "holberton.h"
 #include <stdio.h>
 /**
- * main - check the code
- * Return: Always 0.
+ * _strncat - concatenates two strings since n.
+ * @dest: string to destiny
+ * @src: string to source
+ * @n: value to n
+ * Return: Return a concatenate string
  */
-int main(void)
-
+char *_strncat(char *dest, char *src, int n)
 {
-	char s1[98] = "Hello ";
-	char s2[] = "World!\n";
-	char *ptr;
+	int i = 0, lenghtd = 0;
 
-	printf("%s\n", s1);
-	printf("%s", s2);
-	ptr = _strncat(s1, s2, 1);
-	printf("%s\n", s1);
-	printf("%s", s2);
-	printf("%s\n", ptr);
-	ptr = _strncat(s1, s2, 1024);
-	printf("%s", s1);
-	printf("%s", s2);
-	printf("%s", ptr);
-	return (0);
+	while (*(dest + lenghtd) != '\0')
+		lenghtd++;
+	for (i = 0; i < n && *(src + i) != '\0'; i++)
+	{
+		*(dest + lenghtd) = *(src + i);
+		lenghtd++;
+	}
+	return (dest);
 }
