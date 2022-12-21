@@ -1,27 +1,25 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * _strcat - concatinate 2 strings.
- * @dest: first string.
- * @src: second string.
- * Return: string.
+ * main - check the code
+ * Return: Always 0.
  */
-char *_strcat(char *dest, char *src)
-{
-int i = 0, k = 0;
+int main(void)
 
-while (dest[i] != '\0')
-i++;
-
-while (src[k] != '\0' && n > k)
 {
-dest[i] = src[k];
-k++;
-i++;
-}
-if (n > 0)
-{
-dest[i] = '\0';
-}
+	char s1[98] = "Hello ";
+	char s2[] = "World!\n";
+	char *ptr;
 
-return (dest);
+	printf("%s\n", s1);
+	printf("%s", s2);
+	ptr = _strncat(s1, s2, 1);
+	printf("%s\n", s1);
+	printf("%s", s2);
+	printf("%s\n", ptr);
+	ptr = _strncat(s1, s2, 1024);
+	printf("%s", s1);
+	printf("%s", s2);
+	printf("%s", ptr);
+	return (0);
 }
